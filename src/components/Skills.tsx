@@ -6,7 +6,6 @@ import {
   Smartphone, 
   Database, 
   Users, 
-  Check, 
   Sparkles,
   Terminal,
   Cpu

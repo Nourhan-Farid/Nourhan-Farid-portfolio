@@ -2,23 +2,15 @@ import React, { useEffect } from 'react';
 import { 
   X, 
   Printer, 
-  Download, 
   Mail, 
   Phone, 
-  MapPin, 
-  CheckCircle2, 
-  Award, 
-  GraduationCap, 
-  Briefcase,
-  Layers,
-  ShieldCheck
+  MapPin
 } from 'lucide-react';
 import { 
   personalInfo, 
   skillCategories, 
   experienceData, 
   featuredProject, 
-  otherProjects,
   educationData, 
   certificationsData 
 } from '../data/portfolioData';

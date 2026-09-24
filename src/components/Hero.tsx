@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Mail, Phone, Copy, Check, Sparkles, MapPin, Globe2, Code2, ExternalLink } from 'lucide-react';
+import { ArrowDown, Mail, Phone, Copy, Check, Globe2 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 interface HeroProps {

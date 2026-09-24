@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { 
   FolderGit2, 
-  ExternalLink, 
   Building2, 
-  Calendar, 
-  Code, 
-  Layers, 
-  ArrowUpRight,
-  Filter
+  ArrowUpRight
 } from 'lucide-react';
 import { otherProjects, type ProjectItem } from '../data/portfolioData';
 

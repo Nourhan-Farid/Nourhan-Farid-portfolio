@@ -2,13 +2,9 @@ import React from 'react';
 import { 
   Sparkles, 
   ShoppingCart, 
-  Search, 
-  SlidersHorizontal, 
   Smartphone, 
   Cpu, 
   CheckCircle2, 
-  Layers, 
-  ArrowRight,
   ShieldCheck,
   Zap,
   BookOpen

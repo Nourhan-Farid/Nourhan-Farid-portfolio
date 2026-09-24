@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Atom, Code, Sparkles, CheckCircle, Laptop, ShieldCheck } from 'lucide-react';
+import { Compass, Atom, Code, CheckCircle, ShieldCheck } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export const About: React.FC = () => {

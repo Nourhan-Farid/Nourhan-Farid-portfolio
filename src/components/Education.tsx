@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, BookCheck, CheckCircle2, Atom, Code } from 'lucide-react';
+import { GraduationCap, CheckCircle2, Atom, Code } from 'lucide-react';
 import { educationData } from '../data/portfolioData';
 
 export const Education: React.FC = () => {

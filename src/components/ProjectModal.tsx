@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, CheckCircle2, Building2, Calendar, Code, ShieldCheck, ExternalLink } from 'lucide-react';
+import { X, Building2, ShieldCheck } from 'lucide-react';
 import type { ProjectItem } from '../data/portfolioData';
 
 interface ProjectModalProps {

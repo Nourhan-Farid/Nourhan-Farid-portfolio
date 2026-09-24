@@ -1,12 +1,12 @@
 import React from 'react';
-import { Briefcase, Calendar, CheckCircle2, ChevronRight, Layers, Building2 } from 'lucide-react';
+import { Briefcase, Calendar, CheckCircle2, Building2 } from 'lucide-react';
 import { experienceData } from '../data/portfolioData';
 
 interface ExperienceProps {
   onSelectProject?: (projectId: string) => void;
 }
 
-export const Experience: React.FC<ExperienceProps> = ({ onSelectProject }) => {
+export const Experience: React.FC<ExperienceProps> = () => {
   return (
     <section id="experience" className="py-20 border-t border-slate-900/80 relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export const Experience: React.FC<ExperienceProps> = ({ onSelectProject }) => {
 
         {/* Timeline Layout */}
         <div className="relative border-l border-slate-800 ml-4 sm:ml-32 space-y-12">
-          {experienceData.map((exp, index) => (
+          {experienceData.map((exp) => (
             <div key={exp.id} className="relative pl-6 sm:pl-8 group">
               {/* Timeline Indicator Dot */}
               <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-slate-950 border-2 border-emerald-400 group-hover:bg-emerald-400 transition-colors shadow-sm" />

@@ -6,11 +6,8 @@ import {
   CheckCircle2, 
   Copy, 
   Check, 
-  MessageSquare, 
   Clock, 
-  Sparkles,
-  MapPin,
-  Globe2
+  MapPin
 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
@@ -49,6 +46,7 @@ export const Contact: React.FC<ContactProps> = ({ onCopyText, copiedText }) => {
       )}&body=${encodeURIComponent(
         `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       )}`;
+      window.location.href = mailtoUrl;
       
       // Reset form after short delay
       setFormData({ name: '', email: '', subject: '', message: '' });

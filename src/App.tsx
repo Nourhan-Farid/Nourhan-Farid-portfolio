@@ -16,11 +16,12 @@ import { ResumeModal } from './components/ResumeModal';
 import { Toast } from './components/Toast';
 import type { ProjectItem } from './data/portfolioData';
 
+
 export function App() {
   const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
-  
+
   const [toastMessage, setToastMessage] = useState<string>('');
   const [isToastVisible, setIsToastVisible] = useState(false);
   const [copiedText, setCopiedText] = useState<string | null>(null);
@@ -54,7 +55,7 @@ export function App() {
         <Skills />
 
         {/* Experience Section */}
-        <Experience onSelectProject={() => {}} />
+        <Experience onSelectProject={() => { }} />
 
         {/* Primary Featured Project Section (Shopifya E-commerce) */}
         <FeaturedProject onOpenCaseStudy={() => setIsCaseStudyOpen(true)} />

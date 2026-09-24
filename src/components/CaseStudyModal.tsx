@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { 
   X, 
-  ExternalLink, 
-  Code2, 
   CheckCircle2, 
-  Layers, 
-  Cpu, 
-  Smartphone, 
-  Sparkles,
-  ShieldCheck,
-  Zap,
+  Zap, 
   Info
 } from 'lucide-react';
 import { featuredProject } from '../data/portfolioData';
