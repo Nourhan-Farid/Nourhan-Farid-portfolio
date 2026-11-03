@@ -25,7 +25,7 @@ export const Certifications: React.FC = () => {
           {certificationsData.map((cert, idx) => (
             <div
               key={idx}
-              className="p-6 sm:p-7 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700 transition-colors shadow-lg flex flex-col justify-between"
+              className="p-6 sm:p-7 rounded-2xl bg-slate-950/50 border border-slate-800/80 hover:border-slate-700 transition-colors shadow-lg flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">

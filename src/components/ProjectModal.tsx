@@ -1,24 +1,27 @@
-import React, { useEffect } from 'react';
-import { X, Building2, ShieldCheck } from 'lucide-react';
-import type { ProjectItem } from '../data/portfolioData';
+import React, { useEffect } from "react";
+import { X, Building2, ShieldCheck } from "lucide-react";
+import type { ProjectItem } from "../data/portfolioData";
 
 interface ProjectModalProps {
   project: ProjectItem | null;
   onClose: () => void;
 }
 
-export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+export const ProjectModal: React.FC<ProjectModalProps> = ({
+  project,
+  onClose,
+}) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
     if (project) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
     }
     return () => {
-      document.body.style.overflow = 'unset';
-      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [project, onClose]);
 
@@ -29,9 +32,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       role="dialog"
       aria-modal="true"
       aria-labelledby="project-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/50 backdrop-blur-md animate-fade-in"
     >
-      <div className="relative w-full max-w-xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+      <div className="relative w-full max-w-xl bg-slate-950/50 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="p-6 border-b border-slate-800 flex items-start justify-between gap-4 bg-slate-950/50">
           <div>
@@ -43,7 +46,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 {project.period}
               </span>
             </div>
-            <h3 id="project-modal-title" className="text-xl sm:text-2xl font-bold text-white">
+            <h3
+              id="project-modal-title"
+              className="text-xl sm:text-2xl font-bold text-white"
+            >
               {project.title}
             </h3>
             <div className="flex items-center gap-2 mt-1 text-slate-400 text-xs font-mono">
@@ -92,20 +98,48 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex items-start gap-3">
             <ShieldCheck className="w-5 h-5 text-emerald-400 mt-0.5 shrink-0" />
             <div className="text-xs text-slate-300">
-              <strong className="text-white block mb-0.5">Recruiter Note:</strong>
-              Code demonstrations, architecture explanations, and technical discussion for this project are available directly during technical screening interviews.
+              <strong className="text-white block mb-0.5">
+                Recruiter Note:
+              </strong>
+              Code demonstrations, architecture explanations, and technical
+              discussion for this project are available directly during
+              technical screening interviews.
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="p-4 border-t border-slate-800 bg-slate-950/70 flex justify-end gap-3">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 rounded-xl text-xs font-medium text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 transition-colors"
-          >
-            Close
-          </button>
+        <div className="p-4 border-t border-slate-800 bg-slate-950/50 flex justify-between gap-3">
+          <div className="">
+            {project.demoLink && (
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-xl text-xs font-medium text-emerald-50 bg-emerald-600 hover:bg-emerald-700 transition-colors mr-2"
+              >
+                Live Demo
+              </a>
+            )}
+            {project.repoLink && (
+              <a
+                href={project.repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-xl text-xs font-medium dark:text-slate-50 text-slate-900 bg-slate-800 hover:bg-slate-700 transition-colors"
+              >
+                View Code
+              </a>
+            )}
+          </div>
+          <div className="">
+            <button
+              onClick={onClose}
+              className="px-4 py-2 rounded-xl text-xs font-medium dark:text-slate-50 text-slate-900 bg-slate-800 hover:bg-slate-700 transition-colors"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>

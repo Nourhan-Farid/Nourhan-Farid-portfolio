@@ -20,7 +20,10 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectProject }) =
     : otherProjects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 border-t border-slate-900/80 relative">
+    <section
+      id="projects"
+      className="py-20 border-t border-slate-900/80 relative"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
@@ -33,20 +36,22 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectProject }) =
               Other Projects & Practical Applications
             </h2>
             <p className="mt-2 text-base text-slate-400 max-w-xl">
-              Projects developed across Route Academy, CodeAlpha, and CognoRise InfoTech covering state management, algorithms, and responsive interfaces.
+              Projects developed across Route Academy, CodeAlpha, and CognoRise
+              InfoTech covering state management, algorithms, and responsive
+              interfaces.
             </p>
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 self-start md:self-auto bg-slate-900/90 p-1.5 rounded-xl border border-slate-800">
+          <div className="flex flex-wrap gap-2 self-start md:self-auto bg-slate-950/50 p-1.5 rounded-xl border border-slate-800">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   activeFilter === cat
-                    ? 'bg-emerald-500 text-slate-950 font-semibold shadow-sm'
-                    : 'text-slate-400 hover:text-white'
+                    ? "bg-emerald-400 text-slate-950 font-semibold shadow-sm"
+                    : "text-slate-400 hover:text-white"
                 }`}
               >
                 {cat}
@@ -60,12 +65,12 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectProject }) =
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700/80 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-black/40 group hover:-translate-y-1"
+              className="p-6 rounded-2xl bg-slate-950/50 border border-slate-800/80 hover:border-slate-700/80 flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:shadow-black/40 group hover:-translate-y-1"
             >
               <div>
                 {/* Header with association & category */}
                 <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/50">
+                  <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-800/50">
                     {project.category}
                   </span>
                   <div className="flex items-center gap-1.5 text-slate-400 text-xs font-mono">
@@ -74,7 +79,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectProject }) =
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition-colors mb-2">
+                <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-emerald-400 transition-colors mb-2">
                   {project.title}
                 </h3>
 
@@ -99,7 +104,7 @@ export const ProjectsGrid: React.FC<ProjectsGridProps> = ({ onSelectProject }) =
                 {/* Inspect Action */}
                 <button
                   onClick={() => onSelectProject(project)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/50 hover:bg-slate-800 border border-slate-700/60 hover:border-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 >
                   <span>Inspect Details</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-emerald-400" />

@@ -3,9 +3,9 @@ import { ArrowUp, Mail, Phone, ShieldCheck } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 export const Footer: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -25,10 +25,10 @@ export const Footer: React.FC = () => {
           {/* Brand info */}
           <div className="md:col-span-5 space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="h-8 w-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center font-mono font-bold text-emerald-400 text-sm">
+              <div className="h-8 w-8 rounded-lg bg-accent-500/20 border border-accent-500/30 flex items-center justify-center font-mono font-bold text-accent-400 text-sm">
                 NF
               </div>
-              <span className="text-base font-bold text-white tracking-tight">
+              <span className="text-base font-bold text-accent-500 tracking-tight">
                 {personalInfo.name}
               </span>
             </div>
@@ -93,14 +93,14 @@ export const Footer: React.FC = () => {
           <p>
             © {new Date().getFullYear()} {personalInfo.name}. Built with React, TypeScript & Tailwind CSS.
           </p>
-          <button
+          {/* <button
             onClick={scrollToTop}
             aria-label="Back to top"
             className="flex items-center gap-1.5 text-slate-400 hover:text-emerald-400 transition-colors py-1 px-2.5 rounded-lg hover:bg-slate-900 border border-slate-800"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          </button> */}
         </div>
       </div>
     </footer>

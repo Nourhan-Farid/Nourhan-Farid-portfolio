@@ -48,7 +48,9 @@ export interface ProjectItem {
   period: string;
   description: string;
   technologies: string[];
-  category: 'React' | 'JavaScript' | 'Responsive Web';
+  category: "React" | "JavaScript" | "Responsive Web";
+  demoLink?: string;
+  repoLink?: string;
 }
 
 export interface EducationItem {
@@ -69,7 +71,7 @@ export interface CertificationItem {
 
 export const personalInfo: PersonalInfo = {
   name: "Nourhan Farid",
-  role: "Junior Front-End Developer",
+  role: "Front-End Developer",
   email: "nourhanfarid883@gmail.com",
   phone: "01070672730",
   location: "Cairo, Egypt",
@@ -111,7 +113,8 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "Responsive & Modern Design",
-    description: "Mobile-first layouts, accessibility standards, and UX fidelity",
+    description:
+      "Mobile-first layouts, accessibility standards, and UX fidelity",
     icon: "smartphone",
     skills: [
       "Mobile-first development",
@@ -122,13 +125,15 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     category: "State Management & APIs",
-    description: "Predictable application data flow and RESTful data integration",
+    description:
+      "Predictable application data flow and RESTful data integration",
     icon: "database",
     skills: ["Context API", "CRUD operations", "REST APIs", "Redux"],
   },
   {
     category: "Soft Skills & Execution",
-    description: "Collaborative mindset, engineering rigor, and execution speed",
+    description:
+      "Collaborative mindset, engineering rigor, and execution speed",
     icon: "users",
     skills: [
       "Problem-solving",
@@ -151,7 +156,14 @@ export const experienceData: ExperienceItem[] = [
       "Built Daniel’s Portfolio using modern UI/UX principles and responsive design.",
       "Created a React + Tailwind CSS E-commerce Website using Context API for cart and product state management.",
     ],
-    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "REST APIs", "Context API"],
+    techStack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "REST APIs",
+      "Context API",
+    ],
   },
   {
     id: "codealpha",
@@ -164,7 +176,13 @@ export const experienceData: ExperienceItem[] = [
       "Built a Simple Calculator with real-time functionality using JavaScript.",
       "Developed a Personal Portfolio demonstrating front-end framework skills with responsive and recruiter-friendly design.",
     ],
-    techStack: ["JavaScript", "HTML5", "CSS3", "Responsive Design", "UI Transitions"],
+    techStack: [
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Responsive Design",
+      "UI Transitions",
+    ],
   },
   {
     id: "cognorise",
@@ -177,17 +195,29 @@ export const experienceData: ExperienceItem[] = [
       "Developed a To-Do App using React state management.",
       "Implemented a Static Website optimized for performance and cross-browser compatibility.",
     ],
-    techStack: ["React", "JavaScript (ES6+)", "State Management", "Performance Optimization"],
+    techStack: [
+      "React",
+      "JavaScript (ES6+)",
+      "State Management",
+      "Performance Optimization",
+    ],
   },
 ];
 
 export const featuredProject: FeaturedProjectData = {
   id: "shopifya-ecommerce",
   title: "Shopifya — E-commerce Website",
-  subtitle: "Comprehensive e-commerce client handling dynamic catalog, persistent shopping cart, and REST APIs",
+  subtitle:
+    "Comprehensive e-commerce client handling dynamic catalog, persistent shopping cart, and REST APIs",
   period: "March 2024 – September 2024",
   role: "Lead Front-End Developer (Route Academy Project)",
-  technologies: ["React.js", "Tailwind CSS", "REST APIs", "Context API", "JavaScript (ES6+)"],
+  technologies: [
+    "React.js",
+    "Tailwind CSS",
+    "REST APIs",
+    "Context API",
+    "JavaScript (ES6+)",
+  ],
   overview:
     "Shopifya is a modern, fully responsive e-commerce web application engineered to handle real-world catalog workflows. The platform integrates REST APIs to fetch, search, filter, and manage 100+ dynamic products while maintaining seamless client-side state for the shopping cart and checkout pipeline.",
   highlights: [
@@ -230,6 +260,42 @@ export const featuredProject: FeaturedProjectData = {
 
 export const otherProjects: ProjectItem[] = [
   {
+    id: "SkyCast",
+    title: "SkyCast — Weather Forecast Application",
+    association: "Personal Project",
+    period: "September 2026 – October 2026",
+    category: "React",
+    description:
+      "SkyCast is a modern weather forecast application that provides users with accurate and up-to-date weather information across multiple locations. Built with React, Vite, and Tailwind CSS, the project emphasizes performance, scalability, and excellent user experience.",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "REST APIs",
+      "Responsive Design",
+    ],
+    demoLink: "https://skycast-five-theta.vercel.app/",
+    repoLink: "https://github.com/Nourhan-Farid/skyCast",
+  },
+  {
+    id: "Yummies-Taste",
+    title: "Yummies Taste",
+    association: "Personal Project",
+    period: "August 2026 – September 2026",
+    category: "React",
+    description:
+      "Yummies Taste is a responsive meal discovery application that enables users to browse recipes, explore meal details, and discover cuisines through a modern and intuitive interface. Built with React, Vite, and Tailwind CSS, the project emphasizes performance, scalability, and excellent user experience.",
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST APIs",
+      "Responsive Design",
+    ],
+    demoLink: "https://yummies-taste.vercel.app/",
+    repoLink: "https://github.com/Nourhan-Farid/YummiesTaste",
+  },
+  {
     id: "bookmark-app",
     title: "Bookmark Application",
     association: "Route Academy",
@@ -237,7 +303,15 @@ export const otherProjects: ProjectItem[] = [
     category: "JavaScript",
     description:
       "Developed a Bookmark Application with full CRUD functionality for efficient data storage and retrieval. Features input validation, URL structure verification, and persistent local storage.",
-    technologies: ["JavaScript (ES6+)", "CRUD Operations", "HTML5", "CSS3", "Local Storage"],
+    technologies: [
+      "JavaScript (ES6+)",
+      "CRUD Operations",
+      "HTML5",
+      "CSS3",
+      "Local Storage",
+    ],
+    demoLink: "https://nourhan-farid.github.io/Bookmarker_App/",
+    repoLink: "https://github.com/Nourhan-Farid/Bookmarker_App",
   },
   {
     id: "daniels-portfolio",
@@ -247,7 +321,15 @@ export const otherProjects: ProjectItem[] = [
     category: "Responsive Web",
     description:
       "Built Daniel’s Portfolio using modern UI/UX principles and responsive design. Emphasizes clean typography, responsive layout breakpoints, and subtle interactive transitions.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "UI/UX Principles", "Responsive Design"],
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "UI/UX Principles",
+      "Responsive Design",
+    ],
+    demoLink: "https://nourhan-farid.github.io/Daniels-Portfolio/",
+    repoLink: "https://github.com/Nourhan-Farid/Daniels-Portfolio",
   },
   {
     id: "interactive-gallery",
@@ -257,7 +339,14 @@ export const otherProjects: ProjectItem[] = [
     category: "JavaScript",
     description:
       "Designed and deployed an Interactive Image Gallery with dynamic filtering and smooth transitions. Enables users to explore categorized collections with instantaneous visual feedback.",
-    technologies: ["JavaScript", "CSS Transitions", "Dynamic Filtering", "Responsive Grid"],
+    technologies: [
+      "JavaScript",
+      "CSS Transitions",
+      "Dynamic Filtering",
+      "Responsive Grid",
+    ],
+    demoLink: "https://nourhan-farid.github.io/CodeAlpha_ImageGallery/",
+    repoLink: "https://github.com/Nourhan-Farid/CodeAlpha_ImageGallery",
   },
   {
     id: "simple-calculator",
@@ -267,7 +356,14 @@ export const otherProjects: ProjectItem[] = [
     category: "JavaScript",
     description:
       "Built a Simple Calculator with real-time functionality using JavaScript. Features clean arithmetic parsing, error prevention for invalid inputs, and a tactile keypad interface.",
-    technologies: ["JavaScript (ES6+)", "DOM Manipulation", "CSS Grid", "Event Handling"],
+    technologies: [
+      "JavaScript (ES6+)",
+      "DOM Manipulation",
+      "CSS Grid",
+      "Event Handling",
+    ],
+    demoLink: "https://nourhan-farid.github.io/CodeAlpha-Calculator/",
+    repoLink: "https://github.com/Nourhan-Farid/CodeAlpha-Calculator",
   },
   {
     id: "quiz-app",
@@ -277,7 +373,14 @@ export const otherProjects: ProjectItem[] = [
     category: "React",
     description:
       "Created a Quiz App with interactive features and state management. Implements question progression logic, immediate answer scoring, and an end-of-round performance summary.",
-    technologies: ["React", "State Management", "Component Architecture", "Tailwind CSS"],
+    technologies: [
+      "React.js",
+      "State Management",
+      "Component Architecture",
+      "Tailwind CSS",
+    ],
+    demoLink: "https://nourhan-farid.github.io/CongoRiseInfoTech_QuizApp/",
+    repoLink: "https://github.com/Nourhan-Farid/CongoRiseInfoTech_QuizApp",
   },
   {
     id: "todo-app",
@@ -288,6 +391,8 @@ export const otherProjects: ProjectItem[] = [
     description:
       "Developed a To-Do App using React state management. Provides task creation, status toggles, deletion, and filtering by completion state in a clean, minimal interface.",
     technologies: ["React", "React Hooks", "State Management", "Tailwind CSS"],
+    demoLink: "https://nourhan-farid.github.io/To_Do_App/",
+    repoLink: "https://github.com/Nourhan-Farid/To_Do_App",
   },
   {
     id: "static-website",
@@ -297,7 +402,14 @@ export const otherProjects: ProjectItem[] = [
     category: "Responsive Web",
     description:
       "Implemented a Static Website optimized for performance and cross-browser compatibility. Followed strict semantic HTML structures and accessible styling guidelines.",
-    technologies: ["HTML5", "CSS3", "Cross-browser Compatibility", "Performance Optimization"],
+    technologies: [
+      "HTML5",
+      "CSS3",
+      "Cross-browser Compatibility",
+      "Performance Optimization",
+    ],
+    demoLink: "https://nourhan-farid.github.io/Onea.-Platform/",
+    repoLink: "https://github.com/Nourhan-Farid/Onea.-Platform",
   },
 ];
 
@@ -346,6 +458,28 @@ export const certificationsData: CertificationItem[] = [
       "State management & Hooks",
       "API integration",
       "Component lifecycle & rendering",
+    ],
+    badgeColor: "cyan",
+  },
+  {
+    title: "Frontend development diploma",
+    issuer: "Route Academy",
+    topics: [
+      "React & Next.js component ecosystems",
+      "TypeScript type safety in modern web apps",
+      "Modern UI frameworks (Tailwind CSS, Material UI, Bootstrap)",
+      "Hands-on e-commerce and responsive portfolio projects",
+    ],
+    badgeColor: "cyan",
+  },
+  {
+    title: "Ready for tomorrow - Tech Track",
+    issuer: "Digitera - iCareer",
+    topics: [
+      "Master Agile delivery and Jira workflows.",
+      "Build faster with modern AI dev tools.",
+      "Strengthen collaboration and technical communication.",
+      "Gain real-world experience through a capstone project.",
     ],
     badgeColor: "cyan",
   },

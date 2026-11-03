@@ -23,9 +23,9 @@ export const Toast: React.FC<ToastProps> = ({ message, isVisible, onClose }) => 
     <div
       role="status"
       aria-live="polite"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-slate-900 border border-emerald-500/40 text-slate-100 px-4 py-3 rounded-xl shadow-2xl shadow-emerald-950/40 animate-slide-up backdrop-blur-md"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-slate-950/50 border border-accent-500/40 text-slate-100 px-4 py-3 rounded-xl shadow-2xl shadow-accent-950/40 animate-slide-up backdrop-blur-md"
     >
-      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400">
+      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-accent-400">
         <CheckCircle2 className="h-5 w-5" />
       </div>
       <p className="text-sm font-medium text-slate-200">{message}</p>

@@ -46,13 +46,13 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
       role="dialog"
       aria-modal="true"
       aria-labelledby="resume-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/90 backdrop-blur-md overflow-y-auto animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/60 backdrop-blur-md overflow-y-auto animate-fade-in"
     >
-      <div className="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl max-h-[92vh] flex flex-col overflow-hidden">
+      <div className="relative w-full max-w-4xl bg-slate-950/50 border border-slate-800 rounded-2xl shadow-2xl max-h-[92vh] flex flex-col overflow-hidden">
         {/* Modal Top Actions */}
         <div className="p-4 sm:p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950/70">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800/50">
+            <span className="text-xs font-mono font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-800/50">
               Verified CV Profile
             </span>
             <span className="text-xs text-slate-400 hidden sm:inline">
@@ -83,7 +83,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         <div className="p-6 sm:p-10 overflow-y-auto space-y-8 bg-slate-950 text-slate-200 text-sm">
           {/* Header */}
           <div className="border-b border-slate-800 pb-6">
-            <h1 id="resume-title" className="text-2xl sm:text-3xl font-extrabold text-white">
+            <h1
+              id="resume-title"
+              className="text-2xl sm:text-3xl font-extrabold text-white"
+            >
               {personalInfo.name}
             </h1>
             <p className="text-emerald-400 font-semibold text-base mt-1">
@@ -123,12 +126,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               {skillCategories.map((cat) => (
-                <div key={cat.category} className="p-3 rounded-lg bg-slate-900 border border-slate-800">
+                <div
+                  key={cat.category}
+                  className="p-3 rounded-lg bg-slate-900 border border-slate-800"
+                >
                   <span className="font-semibold text-white block mb-1">
                     {cat.category}:
                   </span>
                   <span className="text-slate-300">
-                    {cat.skills.join(', ')}
+                    {cat.skills.join(", ")}
                   </span>
                 </div>
               ))}
@@ -142,10 +148,14 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </h2>
             <div className="space-y-4">
               {experienceData.map((exp) => (
-                <div key={exp.id} className="p-4 rounded-xl bg-slate-900 border border-slate-800">
+                <div
+                  key={exp.id}
+                  className="p-4 rounded-xl bg-slate-900 border border-slate-800"
+                >
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                     <span className="font-bold text-white text-sm">
-                      {exp.role} — <span className="text-emerald-400">{exp.company}</span>
+                      {exp.role} —{" "}
+                      <span className="text-emerald-400">{exp.company}</span>
                     </span>
                     <span className="text-xs font-mono text-slate-400">
                       {exp.period}
@@ -171,12 +181,18 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
             </h2>
             <div className="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                <span className="font-bold text-white text-sm">{featuredProject.title}</span>
-                <span className="text-xs font-mono text-slate-400">{featuredProject.period}</span>
+                <span className="font-bold text-white text-sm">
+                  {featuredProject.title}
+                </span>
+                <span className="text-xs font-mono text-slate-400">
+                  {featuredProject.period}
+                </span>
               </div>
-              <p className="text-xs text-slate-300">{featuredProject.overview}</p>
+              <p className="text-xs text-slate-300">
+                {featuredProject.overview}
+              </p>
               <div className="text-xs font-mono text-slate-400">
-                Technologies: {featuredProject.technologies.join(', ')}
+                Technologies: {featuredProject.technologies.join(", ")}
               </div>
             </div>
           </div>
@@ -189,7 +205,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               </h2>
               <div className="space-y-3">
                 {educationData.map((edu, i) => (
-                  <div key={i} className="p-3.5 rounded-lg bg-slate-900 border border-slate-800">
+                  <div
+                    key={i}
+                    className="p-3.5 rounded-lg bg-slate-900 border border-slate-800"
+                  >
                     <span className="font-semibold text-white text-xs block">
                       {edu.degree}
                     </span>
@@ -210,7 +229,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
               </h2>
               <div className="space-y-3">
                 {certificationsData.map((cert, i) => (
-                  <div key={i} className="p-3.5 rounded-lg bg-slate-900 border border-slate-800">
+                  <div
+                    key={i}
+                    className="p-3.5 rounded-lg bg-slate-900 border border-slate-800"
+                  >
                     <span className="font-semibold text-white text-xs block">
                       {cert.title}
                     </span>
@@ -218,13 +240,15 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                       {cert.issuer}
                     </span>
                     <span className="text-[11px] text-slate-400 mt-1 block">
-                      Topics: {cert.topics.join(', ')}
+                      Topics: {cert.topics.join(", ")}
                     </span>
                   </div>
                 ))}
 
                 <div className="p-3.5 rounded-lg bg-slate-900 border border-slate-800 text-xs">
-                  <span className="font-semibold text-white block mb-1">Languages:</span>
+                  <span className="font-semibold text-white block mb-1">
+                    Languages:
+                  </span>
                   <span className="text-slate-300">
                     Arabic (Native), English (Professional Working Proficiency)
                   </span>
